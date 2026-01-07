@@ -1,0 +1,146 @@
+{
+  "name" : "mt_SF_A305_Delta",
+  "runtimeEnvironmentId" : "@hxHB9fgMnk1cYjtmDdCDK0",
+  "runtimeEnvironmentName" : "getlinfas02",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$src_HANA$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "P_Src_HANA",
+      "uiProperties" : {
+        "cnxtype" : "Relational Database",
+        "connectionParameterized" : "true",
+        "paramName" : "P_Src_HANA",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "P_Src_HANA",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objlabel" : "P_Src_Query",
+        "objectParameterized" : "true",
+        "objectParamName" : "P_Src_Query",
+        "objectParamType-mapping" : "DataObject",
+        "originalPath" : "src_HANA"
+      },
+      "sourceConnectionId" : "@gSP90XP9teRf0bYN5KpMMC",
+      "connectionName" : "HANA_UW6",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : false
+      },
+      "customQuery" : "SELECT * FROM \"_SYS_BIC\".\"SAPERP.BASE/V01_A305\" ",
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionParameterName" : "P_Src_HANA",
+        "objectParameterName" : "P_Src_Query",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : true
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$tgt_SF$",
+      "type" : "TARGET",
+      "label" : "P_Tgt_conn",
+      "uiProperties" : {
+        "cnxtype" : "Snowflake Cloud Data Warehouse V2",
+        "connectionParameterized" : "true",
+        "paramName" : "P_Tgt_conn",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "P_Tgt_conn",
+        "objlabel" : "P_Tgt_Obj",
+        "objectParameterized" : "true",
+        "objectParamName" : "P_Tgt_Obj",
+        "objectParamType-mapping" : "DataObject",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "tgt_SF"
+      },
+      "targetConnectionId" : "@9qCp9nB21h7ia8YAD5jvmQ",
+      "connectionName" : "SFCDW_PROD",
+      "targetObject" : "A305_STG",
+      "targetObjectLabel" : "A305_STG",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "newObjectName" : "A305_STG",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "runtimeAttrs" : {
+        "UpdateMode" : "Update As Update",
+        "Truncate Target Table" : "YES"
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "A305_STG",
+      "objectLabel" : "A305_STG",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "tgtObjectAttributes" : {
+        "parent" : "SFDB_DEV/DWORKD01"
+      },
+      "runtimeParameterData" : {
+        "connectionParameterName" : "P_Tgt_conn",
+        "objectParameterName" : "P_Tgt_Obj",
+        "objectDefaultValue" : "A305_STG",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : true
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@i5wLrk5dTaldIbqAndkxGp",
+  "mappingTemplateName" : "m_SF_HANA_Delta",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Stop on errors",
+      "value" : "1"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "parameterFileName" : "MCT_FAGLFLEXA_Delta.prm",
+  "parameterFileDir" : "/infacommon/d/flows/SAP_HANA/config/",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2026-01-07 01:25:33 CST"
+}
